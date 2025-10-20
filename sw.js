@@ -10,6 +10,7 @@ const APP_SHELL_ASSETS = [
   '/style.css',
   '/register.js',
   '/manifest.json',
+  '/favicon.ico',
   // Iconos principales
   '/public/192.png',
   '/public/512.png',
