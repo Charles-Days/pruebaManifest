@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PWA | Calendario</title>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json" />
+    
+    <!-- iOS Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="PWA CB" />
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="/public/192.png" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="/public/192.png" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/public/192.png" />
+    <link rel="shortcut icon" href="/public/192.png" />
+    
+    <!-- Theme Colors -->
+    <meta name="theme-color" content="#ff6b6b" />
+    <meta name="msapplication-TileColor" content="#ff6b6b" />
+    <meta name="msapplication-TileImage" content="/public/192.png" />
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/main.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>Calendario</h1>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="calendar.html" aria-current="page">Calendario</a>
+        <a href="form.html">Formulario</a>
+        <a href="about.html">Acerca de</a>
+      </nav>
+    </header>
+    <main class="container">
+      <div class="calendar-section">
+        <h2>Calendario Interactivo</h2>
+        <p>Gestiona tus eventos y fechas importantes con este calendario moderno y funcional.</p>
+        
+        <div id="calendar" class="calendar"></div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth',
+        });
+        calendar.render();
+      });
+    </script>
+    <script src="register.js"></script>
+  </body>
+</html>

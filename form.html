@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PWA | Formulario</title>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json" />
+    
+    <!-- iOS Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="PWA CB" />
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="/public/192.png" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="/public/192.png" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/public/192.png" />
+    <link rel="shortcut icon" href="/public/192.png" />
+    
+    <!-- Theme Colors -->
+    <meta name="theme-color" content="#ff6b6b" />
+    <meta name="msapplication-TileColor" content="#ff6b6b" />
+    <meta name="msapplication-TileImage" content="/public/192.png" />
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>Formulario</h1>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="calendar.html">Calendario</a>
+        <a href="form.html" aria-current="page">Formulario</a>
+        <a href="about.html">Acerca de</a>
+      </nav>
+    </header>
+    <main class="container">
+      <div class="form-section">
+        <h2>Selección de País</h2>
+        <p>Elige tu país de origen de la lista desplegable. Esta funcionalidad utiliza Select2 para una mejor experiencia de usuario.</p>
+        
+        <div class="form-group">
+          <label for="countries">🌍 Países Disponibles</label>
+          <select id="countries" class="select2" style="width: 100%">
+            <option value="">Selecciona un país</option>
+            <option value="mx">🇲🇽 México</option>
+            <option value="ar">🇦🇷 Argentina</option>
+            <option value="co">🇨🇴 Colombia</option>
+            <option value="pe">🇵🇪 Perú</option>
+            <option value="cl">🇨🇱 Chile</option>
+            <option value="es">🇪🇸 España</option>
+            <option value="us">🇺🇸 Estados Unidos</option>
+            <option value="ca">🇨🇦 Canadá</option>
+          </select>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script>
+      $(function () {
+        $('#countries').select2({ placeholder: 'Selecciona un país' });
+      });
+    </script>
+    <script src="register.js"></script>
+  </body>
+</html>
