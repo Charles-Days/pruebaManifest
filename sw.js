@@ -10,7 +10,9 @@ const APP_SHELL_ASSETS = [
   '/style.css',
   '/register.js',
   '/manifest.json',
+  // Iconos principales
   '/public/192.png',
+  '/public/512.png',
   'https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap',
 ];
 
